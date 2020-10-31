@@ -95,11 +95,76 @@
         <h2 class="text-center">Create an Account</h2>
         <div class="row mt-4 mb-4">
             <div class="col-md-6 offset-md-3">
-                <form action="" method="POST"></form>
+                <form action="" class="shadow-lg p-4" method="POST">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i> <label for="name" class="font-weight-bold pl-2">Name</label>
+                        <input type="text" class="form-control" placeholder="Name" name="rName">
+                    </div>
+                    <div class="form-group">
+                    <i class="fas fa-envelope"></i> <label for="email" class="font-weight-bold pl-2">Email</label>
+                        <input type="email" class="form-control" placeholder="Email" name="rEmail">
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-key"></i> <label for="pass" class="font-weight-bold pl-2">Password</label>
+                        <input type="password" class="form-control" placeholder="Password" name="rPassword">
+                    </div>
+                    <button type="submit" class="btn btn-dark mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button>
+                    <em style="font-size: 10px;">Note - By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy</em>
+                </form>
             </div>
         </div>
     </div>
     <!-- End Registration Section -->
+
+    <!-- Start Review Section -->
+    <div class="jumbotron bg-dark">
+        <div class="container">
+            <h2 class="text-center text-white">Customers Review</h2>
+            <div class="row mt-5">
+                 <div class="col-lg-3 col-sm-6"> <!-- Start 1st column -->
+                    <div class="card text-center shadow-lg mb-2">
+                        <div class="card-body">
+                            <i class="fas fa-user fa-8x" style="border-radius: 100px;"></i>
+                            <!-- <img src="https://via.placeholder.com/150" alt="avt1" class="img-fluid" style="border-radius: 100px;"> -->
+                            <h4 class="card-title" style="margin-top: 10px;">John Doe</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        </div>
+                    </div>
+                </div> <!-- End 1st column -->
+                <div class="col-lg-3 col-sm-6"> <!-- Start 2st column -->
+                    <div class="card text-center shadow-lg mb-2">
+                        <div class="card-body">
+                            <i class="fas fa-user fa-8x" style="border-radius: 100px;"></i>
+                            <!-- <img src="https://via.placeholder.com/150" alt="avt2" class="img-fluid" style="border-radius: 100px;"> -->
+                            <h4 class="card-title" style="margin-top: 10px;">John Doe</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        </div>
+                    </div>
+                </div> <!-- End 2st column -->
+                <div class="col-lg-3 col-sm-6"> <!-- Start 3st column -->
+                    <div class="card text-center shadow-lg mb-2">
+                        <div class="card-body">
+                            <i class="fas fa-user fa-8x" style="border-radius: 100px;"></i>
+                            <!-- <img src="https://via.placeholder.com/150" alt="avt3" class="img-fluid" style="border-radius: 100px;"> -->
+                            <h4 class="card-title" style="margin-top: 10px;">John Doe</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        </div>
+                    </div>
+                </div> <!-- End 3st column -->
+                <div class="col-lg-3 col-sm-6"> <!-- Start 4st column -->
+                    <div class="card text-center shadow-lg mb-2">
+                        <div class="card-body">
+                            <i class="fas fa-user fa-8x" style="border-radius: 100px;"></i>
+                            <!-- <img src="https://via.placeholder.com/150" alt="avt4" class="img-fluid" style="border-radius: 100px;"> -->
+                            <h4 class="card-title" style="margin-top: 10px;">John Doe</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        </div>
+                    </div>
+                </div> <!-- End 4st column -->
+            </div>
+        </div>
+    </div>
+    <!-- End Review Section -->
 
     <!-- Jquery -->
     <script src="js/jquery.min.js"></script>
