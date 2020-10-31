@@ -1,0 +1,25 @@
+/* Name font */
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Navigation Color */
+.navbar #myMenu .custom-nav .nav-item a{
+    color: #fff;
+}
+
+.navbar #myMenu .custom-nav .nav-item a:hover{
+    color: #cecece;
+}
+
+/* Header Image Responsive */
+.back-image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    border-radius: 0px;
+    margin-top: 74px;
+}
