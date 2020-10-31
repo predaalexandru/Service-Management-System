@@ -19,7 +19,17 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    min-height: 70vh;
     border-radius: 0px;
     margin-top: 74px;
+}
+
+/* Header Image Sub-title */
+.font-italic {
+    font-size: 24px;
+}
+
+.mainHeading {
+    margin-top: 100px;
+    text-align: center;
 }
