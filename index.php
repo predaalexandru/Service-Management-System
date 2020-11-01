@@ -90,31 +90,9 @@
     </div>
     <!-- End Service Section -->
 
-    <!-- Start Registration Section -->
-    <div class="container pt-5" id="Registration">
-        <h2 class="text-center">Create an Account</h2>
-        <div class="row mt-4 mb-4">
-            <div class="col-md-6 offset-md-3">
-                <form action="" class="shadow-lg p-4" method="POST">
-                    <div class="form-group">
-                        <i class="fas fa-user"></i> <label for="name" class="font-weight-bold pl-2">Name</label>
-                        <input type="text" class="form-control" placeholder="Name" name="rName">
-                    </div>
-                    <div class="form-group">
-                    <i class="fas fa-envelope"></i> <label for="email" class="font-weight-bold pl-2">Email</label>
-                        <input type="email" class="form-control" placeholder="Email" name="rEmail">
-                    </div>
-                    <div class="form-group">
-                        <i class="fas fa-key"></i> <label for="pass" class="font-weight-bold pl-2">Password</label>
-                        <input type="password" class="form-control" placeholder="Password" name="rPassword">
-                    </div>
-                    <button type="submit" class="btn btn-dark mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button>
-                    <em style="font-size: 10px;">Note - By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy</em>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- End Registration Section -->
+   <!-- Start Registration Section -->
+   <?php include('user_registration.php') ?>
+   <!-- End Registration Section -->
 
     <!-- Start Review Section -->
     <div class="jumbotron bg-dark">
@@ -170,15 +148,9 @@
     <div class="container" id="Contact">
         <h2 class="text-center mb-4">Contact Us</h2>
         <div class="row">
-            <div class="col-md-8"> <!-- Start 1st column -->
-                <form action="" method="POST">
-                    <input type="text" class="form-control" name="name" placeholder="Name"><br>
-                    <input type="text" class="form-control" name="subject" placeholder="Subject"><br>
-                    <input type="email" class="form-control" name="email" placeholder="Email"><br>
-                    <textarea name="message" class="form-control" style="height: 150px;" placeholder="How can we help you?"></textarea><br>
-                    <input type="submit" class="btn btn-dark" name="submit" value="Send"><br><br>
-                </form>
-            </div> <!-- End 1st column -->
+            <!-- Start 1st column -->
+            <?php include('contact_form.php') ?>
+            <!-- End 1st column -->
             <div class="col-md-4 text-center"> <!-- Start 2nd column -->
                 <strong>Headquarter:</strong><br>
                 TD pvt Ltd,<br>
