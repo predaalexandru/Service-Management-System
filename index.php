@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/all.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@
     <!-- End Introduction Jumbotron -->
 
     <!-- Start Service Section -->
-    <div class="container text-center border-bottom">
+    <div class="container text-center border-bottom" id="Services">
         <h2>Our Services</h2>
         <div class="row mt-4">
             <div class="col-sm-4 mb-4">
@@ -91,7 +91,7 @@
     <!-- End Service Section -->
 
     <!-- Start Registration Section -->
-    <div class="container pt-5">
+    <div class="container pt-5" id="Registration">
         <h2 class="text-center">Create an Account</h2>
         <div class="row mt-4 mb-4">
             <div class="col-md-6 offset-md-3">
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                 </div> <!-- End 1st column -->
-                <div class="col-lg-3 col-sm-6"> <!-- Start 2st column -->
+                <div class="col-lg-3 col-sm-6"> <!-- Start 2nd column -->
                     <div class="card text-center shadow-lg mb-2">
                         <div class="card-body">
                             <i class="fas fa-user fa-8x" style="border-radius: 100px;"></i>
@@ -140,8 +140,8 @@
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
                         </div>
                     </div>
-                </div> <!-- End 2st column -->
-                <div class="col-lg-3 col-sm-6"> <!-- Start 3st column -->
+                </div> <!-- End 2nd column -->
+                <div class="col-lg-3 col-sm-6"> <!-- Start 3rd column -->
                     <div class="card text-center shadow-lg mb-2">
                         <div class="card-body">
                             <i class="fas fa-user fa-8x" style="border-radius: 100px;"></i>
@@ -150,8 +150,8 @@
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
                         </div>
                     </div>
-                </div> <!-- End 3st column -->
-                <div class="col-lg-3 col-sm-6"> <!-- Start 4st column -->
+                </div> <!-- End 3rd column -->
+                <div class="col-lg-3 col-sm-6"> <!-- Start 4th column -->
                     <div class="card text-center shadow-lg mb-2">
                         <div class="card-body">
                             <i class="fas fa-user fa-8x" style="border-radius: 100px;"></i>
@@ -160,11 +160,63 @@
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
                         </div>
                     </div>
-                </div> <!-- End 4st column -->
+                </div> <!-- End 4th column -->
             </div>
         </div>
     </div>
     <!-- End Review Section -->
+
+    <!-- Start Contact Section -->
+    <div class="container" id="Contact">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-8"> <!-- Start 1st column -->
+                <form action="" method="POST">
+                    <input type="text" class="form-control" name="name" placeholder="Name"><br>
+                    <input type="text" class="form-control" name="subject" placeholder="Subject"><br>
+                    <input type="email" class="form-control" name="email" placeholder="Email"><br>
+                    <textarea name="message" class="form-control" style="height: 150px;" placeholder="How can we help you?"></textarea><br>
+                    <input type="submit" class="btn btn-dark" name="submit" value="Send"><br><br>
+                </form>
+            </div> <!-- End 1st column -->
+            <div class="col-md-4 text-center"> <!-- Start 2nd column -->
+                <strong>Headquarter:</strong><br>
+                TD pvt Ltd,<br>
+                Adsc Niagar, Dobro<br>
+                Cluj - 433321<br>
+                Phone: +11111111<br>
+                <a href="#" target="_blank">www.termodinamic.com</a><br>
+                <br><br>
+                <strong>Branch:</strong><br>
+                TD pvt Ltd,<br>
+                New Adsc Niagar, Dobro<br>
+                Zalau - 565432<br>
+                Phone: +11111111<br>
+                <a href="#" target="_blank">www.termodinamic.com</a><br>
+            </div> <!-- End 2nd column -->
+        </div>
+    </div>
+    <!-- End Contact Section -->
+
+    <!-- Start Footer Section -->
+    <footer class="container-fluid bg-dark mt-5 text-white">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-md-6"> <!-- Start 1st column -->
+                    <span class="pr-2">Follow us:</span>
+                    <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" class="pr-2 fi-color"><i class="fab fa-linkedin"></i></a>
+                </div> <!-- End 1st column -->
+                <div class="col-md-6 text-right"> <!-- Start 2nd column -->
+                    <small>Designed by Preda Alexandru &copy; 2020 </small>
+                    <small class="ml-2"><a href="#">Admin Login</a></small>
+                </div> <!-- End 2nd column -->
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
 
     <!-- Jquery -->
     <script src="js/jquery.min.js"></script>
@@ -177,5 +229,6 @@
 
     <!-- Font Awesome JS -->
     <script src="js/all.js"></script>
+
 </body>
 </html>
