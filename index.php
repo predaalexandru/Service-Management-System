@@ -39,7 +39,7 @@
                     <a class="nav-link" href="#Registration">Registration</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="requester/requester_login.php">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Contact">Contact</a>
@@ -54,7 +54,7 @@
         <div class="mainHeading">
             <h1 class="text-uppercase text-danger font-weight-bold">Welcome to TERMO DINAMIC</h1>
             <p class="font-italic">High Quality Works</p>
-            <a href="#" class="btn btn-success mr-4">Login</a>
+            <a href="requester/requester_login.php" class="btn btn-success mr-4">Login</a>
             <a href="#" class="btn btn-danger mr-4">Sign Up</a>
         </div>
     </header>
