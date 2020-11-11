@@ -34,7 +34,7 @@
                             <a class="nav-link <?php if(PAGE == 'SubmitRequest') { echo 'active';} ?>" href="submit_request.php"><i class="fab fa-accessible-icon"></i> Submit Request</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php if(PAGE == 'CheckStatus') { echo 'active';} ?>" href="check_status.php"><i class="fas fa-align center"></i> Service Status</a>
+                            <a class="nav-link <?php if(PAGE == 'CheckStatus') { echo 'active';} ?>" href="check_status.php"><i class="fas fa-align-center"></i> Service Status</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?php if(PAGE == 'ChangePassword') { echo 'active';} ?>" href="change_password.php"><i class="fas fa-key"></i> Change Password</a>

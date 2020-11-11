@@ -183,7 +183,7 @@
                 </div> <!-- End 1st column -->
                 <div class="col-md-6 text-right"> <!-- Start 2nd column -->
                     <small>Designed by Preda Alexandru &copy; 2020 </small>
-                    <small class="ml-2"><a href="#">Admin Login</a></small>
+                    <small class="ml-2"><a href="admin/login.php">Admin Login</a></small>
                 </div> <!-- End 2nd column -->
             </div>
         </div>
