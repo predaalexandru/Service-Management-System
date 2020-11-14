@@ -61,7 +61,7 @@ if(!isset($_SESSION['is_adminlogin'])) {
                         <i class="fas fa-key"></i> <label for="pass" class="font-weight-bold pl-2">Password</label>
                         <input type="password" class="form-control" placeholder="Password" name="aPassword">
                     </div>
-                    <button type="submit" class="btn btn-outline-dark mt-3 btn-block shadow-sm font-weight-bold">Login</button>
+                    <button type="submit" class="btn btn-outline-dark mt-3 btn-block shadow-sm font-weight-bold" name="is_adminlogin">Login</button>
                     <?php if(isset($msg)) { echo $msg; } ?>
                 </form>
                 <div class="text-center">

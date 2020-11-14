@@ -4,6 +4,13 @@ define ('PAGE', 'Dashboard');
 include('../db_connect.php');
 include('includes/header.php');
 
+session_start();
+if(isset($_SESSION['is_adminlogin'])) {
+    $aEmail = $_SESSION['aEmail'];
+} else {
+    echo "<script> location.href='login.php'</script>";
+}
+
 ?>
             <div class="col-sm-9 col-md-10"> <!-- Start Dashboard 2nd Column -->
                 <div class="row text-center mx-5">
