@@ -1,5 +1,5 @@
 <?php
-define ('TITLE', 'Update Requester');
+define ('TITLE', 'Add Requester');
 define ('PAGE', 'Requesters');
 include('../db_connect.php');
 include('includes/header.php');

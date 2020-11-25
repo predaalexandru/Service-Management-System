@@ -31,7 +31,7 @@ if(isset($_SESSION['is_adminlogin'])) {
 
             $sql = "UPDATE requesterlogin SET r_login_id = '$rid', r_name = '$rname', r_email = '$remail' WHERE r_login_id = '$rid'";
             if($conn->query($sql) == TRUE) {
-                $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Requester Update Successfully</div>';
+                $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Requester Updated Successfully</div>';
             } else {
                 $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert">Unable to Update Requester</div>';
             }
