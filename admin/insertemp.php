@@ -12,6 +12,7 @@ if(isset($_SESSION['is_adminlogin'])) {
 }
 
 if(isset($_REQUEST['empadd'])) {
+    // Checking for Empty Fields
     if(($_REQUEST['empName'] == "") || ($_REQUEST['empCity'] == "") || ($_REQUEST['empMobile'] == "") || ($_REQUEST['empEmail'] == "")) {
         $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">Fill All Fields</div>';
     } else {

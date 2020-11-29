@@ -13,7 +13,9 @@ if($_SESSION['is_adminlogin']) {
 }
 $aEmail = $_SESSION['aEmail'];
 if(isset($_REQUEST['passupdate'])) {
+    // Checking for Empty Fields
     if($_REQUEST['aPassword'] == "") {
+        // Msg displayed if required field missing
         $passmsg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2">Fill All Fields</div>';
     } else {
         $aPass = $_REQUEST['aPassword'];

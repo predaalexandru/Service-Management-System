@@ -25,10 +25,12 @@ if(isset($_REQUEST['close'])) {
 }
 
 if(isset($_REQUEST['assign'])) {
+    // Checking for Empty Fields
     if(($_REQUEST['request_id'] == "") || ($_REQUEST['request_info'] == "") || ($_REQUEST['requestdesc'] == "") || ($_REQUEST['requestername'] == "") || ($_REQUEST['address1'] == "")
     || ($_REQUEST['address2'] == "") || ($_REQUEST['requestercity'] == "") || ($_REQUEST['requesterstate'] == "") || ($_REQUEST['requesterzip'] == "") || ($_REQUEST['requesteremail'] == "") ||
     ($_REQUEST['requestermobile'] == "") || ($_REQUEST['assigntech'] == "") || ($_REQUEST['inputdate'] == "")
     ) {
+        // Msg displayed if required field missing
         $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">Fill All Fields</div>';
     } else {
         $rid = $_REQUEST['request_id'];

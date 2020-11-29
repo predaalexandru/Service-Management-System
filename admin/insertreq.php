@@ -12,6 +12,7 @@ if(isset($_SESSION['is_adminlogin'])) {
 }
 
 if(isset($_REQUEST['reqadd'])) {
+    // Checking for Empty Fields
     if(($_REQUEST['r_name'] == "") || ($_REQUEST['r_email'] == "") || ($_REQUEST['r_password'] == "")) {
         $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">Fill All Fields</div>';
     } else {

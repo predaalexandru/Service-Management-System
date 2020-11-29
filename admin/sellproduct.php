@@ -21,6 +21,7 @@ if(isset($_SESSION['is_adminlogin'])) {
         $row = $result->fetch_assoc();
     }
     if(isset($_REQUEST['psubmit'])) {
+        // Checking for Empty Fields
         if(($_REQUEST['cname'] == "") || ($_REQUEST['cadd'] == "") || ($_REQUEST['pname'] == "") || ($_REQUEST['pquantity'] == "") || ($_REQUEST['psellingcost'] == "") || ($_REQUEST['totalcost'] == "") || ($_REQUEST['selldate'] == "")) {
             $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">Fill All Fields</div>';
         } else {

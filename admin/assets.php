@@ -64,6 +64,7 @@ if(isset($_SESSION['is_adminlogin'])) {
     ?>
 </div>
 <?php 
+    //Delete Function
      if(isset($_REQUEST['delete'])) {
         $sql = "DELETE FROM assets WHERE pid = {$_REQUEST['id']}";
         if($conn->query($sql) == TRUE) {

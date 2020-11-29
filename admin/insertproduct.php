@@ -12,6 +12,7 @@ if(isset($_SESSION['is_adminlogin'])) {
 }
 
 if(isset($_REQUEST['productadd'])) {
+    // Checking for Empty Fields
     if(($_REQUEST['pname'] == "") || ($_REQUEST['pdop'] == "") || ($_REQUEST['pava'] == "") || ($_REQUEST['ptotal'] == "") || ($_REQUEST['poriginalcost'] == "") || ($_REQUEST['psellingcost'] == "")) {
         $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">Fill All Fields</div>';
     } else {

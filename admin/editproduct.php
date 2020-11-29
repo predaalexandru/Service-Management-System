@@ -22,6 +22,7 @@ if(isset($_SESSION['is_adminlogin'])) {
         $row = $result->fetch_assoc();
     }
     if(isset($_REQUEST['produpdate'])) {
+        // Checking for Empty Fields
         if(($_REQUEST['pname'] == "") || ($_REQUEST['pdop'] == "") || ($_REQUEST['pava'] == "") || ($_REQUEST['ptotal'] == "") || ($_REQUEST['poriginalcost'] == "") || ($_REQUEST['psellingcost'] == "")) {
             $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">Fill All Fields</div>';
         } else {
