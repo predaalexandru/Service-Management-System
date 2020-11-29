@@ -11,6 +11,20 @@ if(isset($_SESSION['is_adminlogin'])) {
     echo "<script> location.href='login.php'</script>";
 }
 
+$sql = "SELECT max(request_id) FROM submitrequest";
+$result = $conn->query($sql);
+$row = $result->fetch_row();
+$submitrequest = $row[0];
+
+$sql1 = "SELECT max(rno) FROM assignwork";
+$result = $conn->query($sql1);
+$row = $result->fetch_row();
+$assignwork = $row[0];
+
+$sql2 = "SELECT * FROM technician";
+$result = $conn->query($sql2);
+$technician = $result->num_rows;
+
 ?>
             <div class="col-sm-9 col-md-10"> <!-- Start Dashboard 2nd Column -->
                 <div class="row text-center mx-5">
@@ -18,8 +32,8 @@ if(isset($_SESSION['is_adminlogin'])) {
                         <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
                             <div class="card-header">Requests Received</div>
                             <div class="card-body">
-                                <h4 class="card-title">43</h4>
-                                <a class="btn text-white" href="#">View</a>
+                                <h4 class="card-title"><?php echo $submitrequest; ?></h4>
+                                <a class="btn text-white" href="request.php">View</a>
                             </div>
                         </div>
                     </div>
@@ -28,8 +42,8 @@ if(isset($_SESSION['is_adminlogin'])) {
                         <div class="card text-white bg-success mb-3" style="max-width: 20rem;">
                             <div class="card-header">Assigned Work</div>
                             <div class="card-body">
-                                <h4 class="card-title">25</h4>
-                                <a class="btn text-white" href="#">View</a>
+                                <h4 class="card-title"><?php echo $assignwork; ?></h4>
+                                <a class="btn text-white" href="work.php">View</a>
                             </div>
                         </div>
                     </div>
@@ -38,8 +52,8 @@ if(isset($_SESSION['is_adminlogin'])) {
                         <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
                             <div class="card-header">No. of Technician</div>
                             <div class="card-body">
-                                <h4 class="card-title">2</h4>
-                                <a class="btn text-white" href="#">View</a>
+                                <h4 class="card-title"><?php echo $technician; ?></h4>
+                                <a class="btn text-white" href="technician.php">View</a>
                             </div>
                         </div>
                     </div>
