@@ -44,14 +44,14 @@ if(isset($_SESSION['is_adminlogin'])) {
                 echo '<td>'.$row['poriginalcost'].'</td>';
                 echo '<td>'.$row['psellingcost'].'</td>';
                 echo '<td>';
-                    echo '<form action="editproduct.php" method="POST" class="d-inline mr-2">';
-                        echo '<input type="hidden" name="id" value='.$row['pid'].'><button class="btn btn-info" name="edit" value="Edit" type="submit"><i class="fas fa-pen"></i></button> ';
+                    echo '<form action="editproduct.php" method="POST" class="d-inline">';
+                        echo '<input type="hidden" name="id" value='.$row['pid'].'><button class="btn btn-info mr-3" name="edit" value="Edit" type="submit"><i class="fas fa-pen"></i></button> ';
                     echo '</form>';
                     echo '<form action="" method="POST" class="d-inline">';
-                        echo '<input type="hidden" name="id" value='.$row['pid'].'><button class="btn btn-secondary" name="delete" value="Delete" type="submit"><i class="far fa-trash-alt"></i></button> ';
+                        echo '<input type="hidden" name="id" value='.$row['pid'].'><button class="btn btn-secondary mr-3" name="delete" value="Delete" type="submit"><i class="far fa-trash-alt"></i></button> ';
                     echo '</form>';
                     echo '<form action="sellproduct.php" method="POST" class="d-inline">';
-                        echo '<input type="hidden" name="id" value='.$row['pid'].'><button class="btn btn-warning" name="issue" value="Issue" type="submit"><i class="fas fa-handshake"></i></button> ';
+                        echo '<input type="hidden" name="id" value='.$row['pid'].'><button class="btn btn-warning mr-3" name="issue" value="Issue" type="submit"><i class="fas fa-handshake"></i></button> ';
                     echo '</form>';
                 echo '</td>';
                 echo '</tr>';

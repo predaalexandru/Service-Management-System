@@ -54,7 +54,7 @@ if(isset($_SESSION['is_adminlogin'])) {
         </div>
         <div class="form-group">
             <label for="pdop">Date of Purchase</label>
-            <input type="text" class="form-control" id="pdop" name="pdop" value="<?php if(isset($row['pdop'])) echo $row['pdop']; ?>">     
+            <input type="date" class="form-control" id="pdop" name="pdop" value="<?php if(isset($row['pdop'])) echo $row['pdop']; ?>">     
         </div>
         <div class="form-group">
             <label for="pava">Available</label>

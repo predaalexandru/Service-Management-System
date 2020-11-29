@@ -20,24 +20,31 @@ if(isset($_SESSION['is_adminlogin'])) {
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
     }
-    if(isset($_REQUEST['produpdate'])) {
-        if(($_REQUEST['pname'] == "") || ($_REQUEST['pdop'] == "") || ($_REQUEST['pava'] == "") || ($_REQUEST['ptotal'] == "") || ($_REQUEST['poriginalcost'] == "") || ($_REQUEST['psellingcost'] == "")) {
+    if(isset($_REQUEST['psubmit'])) {
+        if(($_REQUEST['cname'] == "") || ($_REQUEST['cadd'] == "") || ($_REQUEST['pname'] == "") || ($_REQUEST['pquantity'] == "") || ($_REQUEST['psellingcost'] == "") || ($_REQUEST['totalcost'] == "") || ($_REQUEST['selldate'] == "")) {
             $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert">Fill All Fields</div>';
         } else {
             $pid = $_REQUEST['pid'];
-            $pname = $_REQUEST['pname'];
-            $pdop = $_REQUEST['pdop'];
-            $pava = $_REQUEST['pava'];
-            $ptotal = $_REQUEST['ptotal'];
-            $poriginalcost = $_REQUEST['poriginalcost'];
-            $psellingcost = $_REQUEST['psellingcost'];
+            $pava = $_REQUEST['pava'] - $_REQUEST['pquantity'];
 
-            $sql = "UPDATE assets SET pname = '$pname', pdop = '$pdop', pava = '$pava', ptotal = '$ptotal', poriginalcost = '$poriginalcost', psellingcost = '$psellingcost' WHERE pid = '$pid'";
+            $custname = $_REQUEST['cname'];
+            $custadd = $_REQUEST['cadd'];
+            $cpname = $_REQUEST['pname'];
+            $cpquantity = $_REQUEST['pquantity'];
+            $cpeach = $_REQUEST['psellingcost'];
+            $cptotal = $_REQUEST['totalcost'];
+            $cpdate = $_REQUEST['selldate'];
+
+            $sql = "INSERT INTO customer(custname, custadd, cpname, cpquantity, cpeach, cptotal, cpdate) VALUES ('$custname', '$custadd', '$cpname', '$cpquantity', '$cpeach', '$cptotal', '$cpdate')";
             if($conn->query($sql) == TRUE) {
-                $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert">Requester Updated Successfully</div>';
-            } else {
-                $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert">Unable to Update Requester</div>';
+               $genid = mysqli_insert_id($conn);
+               session_start();
+               $_SESSION['myid'] = $genid;
+               echo "<script> location.href='productsellsuccess.php'</script>";
             }
+
+            $sql1 = "UPDATE assets SET pava = '$pava' WHERE pid = '$pid'";
+            $conn->query($sql1);
         }
     }
     ?>
@@ -49,30 +56,38 @@ if(isset($_SESSION['is_adminlogin'])) {
         </div>
         <div class="form-group">
             <label for="cname">Customer Name</label>
-            <input type="text" class="form-control" id="cname" name="cname" value="<?php if(isset($row['pname'])) echo $row['pname']; ?>">     
+            <input type="text" class="form-control" id="cname" name="cname">     
         </div>
         <div class="form-group">
-            <label for="pdop">Customer Address</label>
-            <input type="text" class="form-control" id="pdop" name="pdop" value="<?php if(isset($row['pdop'])) echo $row['pdop']; ?>">     
+            <label for="cadd">Customer Address</label>
+            <input type="text" class="form-control" id="cadd" name="cadd">     
+        </div>
+        <div class="form-group">
+            <label for="pname">Product Name</label>
+            <input type="text" class="form-control" id="pname" name="pname" value="<?php if(isset($row['pname'])) echo $row['pname']; ?>">     
         </div>
         <div class="form-group">
             <label for="pava">Available</label>
-            <input type="text" class="form-control" id="pava" name="pava" value="<?php if(isset($row['pava'])) echo $row['pava']; ?>" onkeypress="isInputNumber(event)">     
+            <input type="text" class="form-control" id="pava" name="pava" value="<?php if(isset($row['pava'])) echo $row['pava']; ?>" onkeypress="isInputNumber(event)" readonly>     
         </div>
         <div class="form-group">
-            <label for="ptotal">Total</label>
-            <input type="text" class="form-control" id="ptotal" name="ptotal" value="<?php if(isset($row['ptotal'])) echo $row['ptotal']; ?>" onkeypress="isInputNumber(event)">     
+            <label for="pquantity">Quantity</label>
+            <input type="text" class="form-control" id="pquantity" name="pquantity" onkeypress="isInputNumber(event)">     
         </div>
         <div class="form-group">
-            <label for="poriginalcost">Original Cost Each</label>
-            <input type="text" class="form-control" id="poriginalcost" name="poriginalcost" value="<?php if(isset($row['poriginalcost'])) echo $row['poriginalcost']; ?>" onkeypress="isInputNumber(event)">     
-        </div>
-        <div class="form-group">
-            <label for="psellingcost">Selling Cost Each</label>
+            <label for="psellingcost">Price Each</label>
             <input type="text" class="form-control" id="psellingcost" name="psellingcost" value="<?php if(isset($row['psellingcost'])) echo $row['psellingcost']; ?>" onkeypress="isInputNumber(event)">     
         </div>
+        <div class="form-group">
+            <label for="totalcost">Total Price</label>
+            <input type="text" class="form-control" id="totalcost" name="totalcost" onkeypress="isInputNumber(event)">     
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputDate">Date</label>
+            <input type="date" class="form-control" id="inputDate" name="selldate">     
+        </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-success" id="produpdate" name="produpdate">Update</button>
+            <button type="submit" class="btn btn-success" id="psubmit" name="psubmit">Submit</button>
             <a href="assets.php" class="btn btn-secondary">Close</a>
         </div>
         <?php if(isset($msg)) { echo $msg; } ?>
